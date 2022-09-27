@@ -28,7 +28,7 @@ class Render:
 
         for _obj in range(0, len(self.resources_objects)):
             objecting = self.get_object_from_file(self.resources_objects[_obj][0], _obj)
-            ObjectEngine.rotate_y_object(objecting, -math.pi / 4)
+            Object.rotate_y_object(objecting, -math.pi / 4)
 
             if DRAWING_AXES_OBJECT:
                 self.objects.append(Axes(self, obj=_obj))
