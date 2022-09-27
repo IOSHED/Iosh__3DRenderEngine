@@ -1,7 +1,5 @@
 import math
-
 from Render.Object.Objects.axes import Axes
-from Render.Object.Objects.cube import Cube
 from src.Render.Camera.camera import Camera
 from src.Render.Matrix_functions.projection_matrix import Projection
 from src.Render.Object.object_engine import *
@@ -48,8 +46,6 @@ class Render:
 
     def draw_object(self):
         self.window.screen.fill(pg.Color(BG_COLOR_R, BG_COLOR_G, BG_COLOR_B))
-
-        Cube(self).draw_projection()
 
         if self.blt_axes:
             Axes(self).draw_projection()

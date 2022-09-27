@@ -17,8 +17,7 @@ class Cube(ObjectEngine):
         self.update_position(RESOURCES_OBJECTS[obj][1])
         self.faces = faces
 
-        self.colors = pg.Color(PRIMITIVE_COLOR_R, PRIMITIVE_COLOR_G, PRIMITIVE_COLOR_B)
-        self.color_faces = [(color, face) for color, face in zip(self.colors, self.faces)]
-
+        self.color_faces = [(pg.Color(PRIMITIVE_COLOR_R, PRIMITIVE_COLOR_G, PRIMITIVE_COLOR_B), face) for face in
+                            self.faces]
         self.drawing_vertices = False
         self.label = ''
